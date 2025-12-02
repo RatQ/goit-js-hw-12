@@ -49,5 +49,26 @@ export function clearGallery() {
 }
 
 export function toggleLoader(isVisible) {
-  document.querySelector(".loader").classList.toggle("hidden", !isVisible);
+  const loader = document.querySelector(".loader");
+  if (!loader) return;
+  if (isVisible) {
+    loader.classList.remove("hidden");
+  } else {
+    loader.classList.add("hidden");
+  }
+}
+
+export function updateLoadMoreBtn(show) {
+  const btn = document.querySelector(".load-more");
+  if (!btn) return;
+  if (show) {
+    btn.classList.remove("hidden");
+  } else {
+    btn.classList.add("hidden");
+  }
+}
+
+export function isLoadMoreVisible() {
+  const btn = document.querySelector(".load-more");
+  return btn && !btn.classList.contains("hidden");
 }

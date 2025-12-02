@@ -1,12 +1,15 @@
 .loader {
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 70px;
     height: 70px;
     border-radius: 50%;
     background: radial-gradient(circle at center, #ffffff 0%, #e6e6ff 100%);
     box-shadow: 0 0 20px rgba(120, 80, 255, 0.4);
+    z-index: 1000;
     overflow: hidden;
-    margin: 20px auto;
 }
 
 .loader::before {
